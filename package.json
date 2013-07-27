@@ -1,0 +1,10 @@
+{
+  "name": "follow_me",
+  "version": "0.0.1-4",
+  "private": true,
+  "dependencies": {
+    "express": "3.0.3",
+    "ar-drone": "*",
+    "ar-drone-png-stream": "*"
+  }
+}

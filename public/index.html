@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Follow me</title>
+  <script src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<ul>
+  <li><a id="takeOff" >Take off</a></li>
+  <li><a id="clockwise" >Clockwise</a></li>
+  <li><a id="anticlockwise" >AntiClockwise</a></li>
+  <li><a id="stop">stop</a></li>
+  <li><a id="forwards">forwards</a></li>
+  <li><a id="backwards">backwards</a></li>
+
+  <li><a id="up">up</a></li>
+  <li><a id="down">down</a></li>
+
+
+  </ul>
+
+<a id="land" style="display:block ;margin:20px;font-weight: bold; padding:10px; color:white; background-color: red">Land</a>
+
+</div>
+
+<img src="" id="pic" />
+
+<script>
+  $(document).ready(function(){
+      $('#takeOff').click(function(){
+        takeOff()
+      });
+
+    $('#clockwise').click(function(){
+      clockwise();
+    });
+    $('#anticlockwise').click(function(){
+           anticlockwise();
+    })
+
+    $('#stop').click(function(){
+        stop();
+    });
+    $('#land').click(function(){
+         landDrone();
+    });
+
+    $('#up').click(function(){
+           upDrone();
+       });
+
+    $('#down').click(function(){
+            downDrone();
+       });
+
+    $('#forwards').click(function(){
+ forwardsDrone();
+    })
+
+    $('#backwards').click(function(){
+    backwardsDrone();
+    })
+
+
+    setInterval(function(){
+      var date = new Date();
+            $('#pic').attr('src', "/picture?date=" + new Date().toString())
+
+    }, 500)
+
+  })
+
+
+  function takeOff(){
+    console.log('taking off')
+            $.get('/takeoff', function(data) {
+              console.log('take off');
+            });
+
+  }
+
+  function clockwise(){
+    $.get('/clockwise', function(data) {
+                    console.log('clockwise');
+                  });
+  }
+
+  function anticlockwise() {
+      $.get('/anticlockwise', function(data) {
+        console.log('anticlockwise');
+      })
+  }
+
+  function stop(){
+    $.get('/stop', function(data) {
+                      console.log('stop');
+                    });
+  }
+
+  function landDrone() {
+    $.get('/land', function(data) {
+                console.log('land');
+              });
+  }
+
+  function upDrone() {
+    $.get('/up', function(data) {
+                  console.log('up');
+                });
+  }
+
+  function downDrown() {
+    $.get('/down', function(data) {
+                   console.log('down');
+                 });
+  }
+
+  function forwardsDrone(){
+    $.get('/forwards', function(data) {
+           console.log(';and');
+         });
+  }
+
+  function backwardsDrone(){
+    $.get('/backwards', function(data) {
+              console.log('backwards');
+            });
+  }
+
+  function leftDrone(){
+     $.get('/left', function(data) {
+               console.log('backwards');
+             });
+   }
+
+  function rightDrone(){
+       $.get('/right', function(data) {
+                 console.log('backwards');
+               });
+     }
+
+</script>
+</body>
+</html>
