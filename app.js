@@ -7,7 +7,7 @@ client.disableEmergency()
 
 client.on('navdata', function(e){
 
-
+if(e.demo) {
   if(e.demo.altitude > 1.5) {
     console.log('TOO HIGH! Safety')
     client.down(0.2)
@@ -23,6 +23,7 @@ client.on('navdata', function(e){
         client.up(0)
       })
     }
+}
 })
 
 
