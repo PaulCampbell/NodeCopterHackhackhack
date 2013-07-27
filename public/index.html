@@ -83,6 +83,8 @@
     backwardsDrone();
     })
 
+    $('body').keypress(processKeyDown);
+
 
     setInterval(function(){
       var date = new Date();
@@ -116,6 +118,32 @@
        average = values / length;
        return average;
      }
+
+  function processKeyDown(event){
+    console.log(event.keyCode);
+    switch (event.keyCode){
+      case 119: // w
+        forwardsDrone();
+        break;
+      case 120: // x
+        backwardsDrone();
+        break;
+      case 97: // a
+        leftDrone();
+        break;
+      case 100: // d
+        rightDrone();
+        break;
+      case 117: // u
+        upDrone();
+      case 110: // n
+        downDrone();
+      case 32: // space
+        landDrone();
+      case 13: // enter
+        takeOff();
+    }
+  }
 
   function rafCallback(time) {
 
@@ -181,7 +209,7 @@
 
   function forwardsDrone(){
     $.get('/forwards', function(data) {
-           console.log(';and');
+           console.log('forwards');
          });
   }
 
@@ -193,13 +221,13 @@
 
   function leftDrone(){
      $.get('/left', function(data) {
-               console.log('backwards');
+               console.log('left');
              });
    }
 
   function rightDrone(){
        $.get('/right', function(data) {
-         console.log('backwards');
+         console.log('right');
        });
      }
   })
