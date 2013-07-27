@@ -6,13 +6,13 @@
 </head>
 <body>
 <ul>
-  <li><a id="takeOff" >Take off</a></li>
+  <li><a href="#" id="takeOff" >Take off</a> (enter)</li>
   <li><a id="clockwise" >Clockwise</a></li>
   <li><a id="anticlockwise" >AntiClockwise</a></li>
-  <li><a id="stop">stop</a></li>
-  <li><a id="forwards">forwards</a></li>
-  <li><a id="backwards">backwards</a></li>
-
+  <li><a id="stop">stop</a> (s)</li>
+  <li><a id="forwards">forwards</a> (w)</li>
+  <li><a id="backwards">backwards</a> (x)</li>
+<li><a id="flip">DO NOT HIT THIS</a></li>
   <li><a id="up">up</a></li>
   <li><a id="down">down</a></li>
 
@@ -24,6 +24,19 @@
 </div>
 
 <img src="" id="pic" />
+
+
+<div id="deviceRotation">
+  ROTATIONS
+</div>
+
+<div id="beta">
+  beta
+</div>
+
+<div id="gamma">
+  gamma
+</div>
 
 <canvas id="graphicEqualiser" />
 
@@ -46,6 +59,43 @@
 
 
   $(document).ready(function(){
+
+   var currentRotation = null;
+    window.addEventListener('deviceorientation', function(e) {
+      if(currentRotation == null) {
+        currentRotation = e.alpha
+      }
+
+      $('#deviceRotation').text("alpha: " + e.alpha + "; current: " + currentRotation)
+
+     /* if( e.alpha - currentRotation > 45 )  {
+        currentRotation = e.alpha
+        clockwise(e.alpha)
+      }
+      if(currentRotation - e.alpha > 45 ) {
+        currentRotation = e.alpha
+
+          anticlockwise(e.alpha)
+      }
+*/
+      //
+            if(e.beta > 20) {
+              backwardsDrone()
+            }
+
+      if(e.beta < -20) {
+                 forwardsDrone()
+               }
+
+
+          $('#gamma').text(e.gamma);
+      $('#beta').text(e.beta)
+
+    }, false)
+
+
+
+
       $('#takeOff').click(function(){
         takeOff()
       });
@@ -83,6 +133,12 @@
     backwardsDrone();
     })
 
+    $('#flip').click(function(){
+      $.get('/flip', function(data) {
+                   console.log('IDIOT');
+                 });
+    })
+
     $('body').keypress(processKeyDown);
 
 
@@ -90,7 +146,8 @@
       var date = new Date();
             $('#pic').attr('src', "/picture?date=" + new Date().toString())
 
-    }, 500)
+    }, 100)
+
 
 
 
@@ -123,21 +180,26 @@
     console.log(event.keyCode);
     switch (event.keyCode){
       case 119: // w
+      case 38:
         forwardsDrone();
         break;
       case 120: // x
+      case 40:
         backwardsDrone();
         break;
       case 97: // a
+      case 37:
         leftDrone();
         break;
       case 100: // d
+      case 39:
         rightDrone();
         break;
       case 117: // u
+
         upDrone();
         break;
-      case 110: // n
+      case 78: // n
         downDrone();
         break;
       case 32: // space
@@ -150,6 +212,8 @@
         stop();
         break;
     }
+
+    return false;
   }
 
   function rafCallback(time) {
@@ -161,7 +225,7 @@
       //set volume
       var volume = getAverageVolume(freqByteData);
 
-      if(volume > 250) {
+      if(volume > 100) {
         console.log(volume);
         $.get('/land', function(data) {
                console.log('land');
@@ -178,14 +242,14 @@
 
   }
 
-  function clockwise(){
-    $.get('/clockwise', function(data) {
+  function clockwise(rotationAmount){
+    $.get('/clockwise?a='+ rotationAmount, function(data) {
                     console.log('clockwise');
                   });
   }
 
-  function anticlockwise() {
-      $.get('/anticlockwise', function(data) {
+  function anticlockwise(rotationAmount) {
+      $.get('/anticlockwise?a='+ rotationAmount, function(data) {
         console.log('anticlockwise');
       })
   }
@@ -208,7 +272,7 @@
                 });
   }
 
-  function downDrown() {
+  function downDrone() {
     $.get('/down', function(data) {
                    console.log('down');
                  });

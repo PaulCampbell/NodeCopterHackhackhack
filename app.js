@@ -10,8 +10,8 @@ client.on('navdata', function(e){
 if(e.demo) {
   if(e.demo.altitude > 1.5) {
     console.log('TOO HIGH! Safety')
-    client.down(0.2)
-    client.after(200, function(){
+    client.down(0.5)
+    client.after(100, function(){
       console.log('went down')
        client.down(0)
      })
@@ -19,7 +19,7 @@ if(e.demo) {
 
   if(e.droneState.flying==1 && e.demo.altitude < 0.2) {
       client.up(0.2)
-      client.after(200, function(){
+      client.after(100, function(){
         client.up(0)
       })
     }
@@ -58,13 +58,33 @@ app.get('/land', function(req, res){
 });
 
 app.get('/clockwise', function(req, res){
-  client.clockwise(0.2);
+  var rotation =  req.query.a
+  if(!rotation) {
+    rotation = 45
+  }
+  console.log('going clockwise')
+  client.clockwise(0.5)
+  client.after(rotation * 100, function() {
+    console.log('stopping clockwise')
+    client.clockwise(0)
+    });
   res.writeHead(200);
     res.end();
 });
 
 app.get('/anticlockwise', function(req, res){
-  client.clockwise(-0.2);
+  var rotation =  req.query.a
+    if(!rotation) {
+      rotation = 45
+    }
+  client.counterClockwise(0.5)
+  console.log('going anticlockwise')
+
+  client.after(rotation * 100, function() {
+    console.log('stopping anticlockwise')
+    client.counterClockwise(0)
+      });
+
   res.writeHead(200);
     res.end();
 });
@@ -89,19 +109,28 @@ app.get('/left', function(req,res) {
 
 
 app.get('/right', function(req,res) {
-  client.left(0.2);
+  client.right(0.2);
   res.writeHead(200);
   res.end();
 });
 
 app.get('/up', function(req,res) {
-  client.up(0.2);
+  client.up(0.5);
   res.writeHead(200);
   res.end();
 });
 
 app.get('/down', function(req,res) {
-  client.down(0.2);
+  console.log('DOWN ***********')
+  client.down(0.5);
+  res.writeHead(200);
+  res.end();
+});
+
+
+app.get('/flip', function(req,res) {
+  console.log('flipping')
+  client.animate('flipLeft', 15);
   res.writeHead(200);
   res.end();
 });
@@ -110,7 +139,6 @@ app.get('/down', function(req,res) {
 
 
 var pngStream = client.getPngStream();
-
 
 var lastPng;
 pngStream

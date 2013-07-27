@@ -5,14 +5,14 @@
     <ignored path="scratch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$USER_HOME$/revuse/test_site/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374916928416" ignored="false" />
-    <file path="/index.html" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374928278794" ignored="false" />
+    <file path="/index.html" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374940098862" ignored="false" />
     <file path="/package.json" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374920021031" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/views/layout.jade" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/views/phoneconnect.jade" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917924674" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/infrastructure/routes.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="/drone.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374921044004" ignored="false" />
-    <file path="/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374929255712" ignored="false" />
+    <file path="/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374940661740" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="9" selection-start="145" selection-end="145" vertical-scroll-proportion="0.22277227">
+            <state line="23" column="8" selection-start="478" selection-end="478" vertical-scroll-proportion="0.74733096">
               <folding />
             </state>
           </provider>
@@ -44,10 +44,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="15" selection-start="1562" selection-end="1562" vertical-scroll-proportion="-13.8">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="148" column="10" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-3.12">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,16 +53,7 @@
       <file leaf-file-name="drone.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drone.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="271" selection-end="297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="132" selection-end="132" vertical-scroll-proportion="-3.75">
+            <state line="18" column="6" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,10 +77,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="78" />
+    <option name="x" value="266" />
+    <option name="y" value="64" />
     <option name="width" value="1057" />
-    <option name="height" value="754" />
+    <option name="height" value="580" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -162,8 +151,8 @@
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/WiiPhone" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -190,6 +179,13 @@
       <option name="testName" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -202,26 +198,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="78" width="1057" height="754" extended-state="0" />
+    <frame x="266" y="64" width="1057" height="580" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30959445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3165183" sideWeight="0.6717391" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -285,9 +281,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="132" selection-end="132" vertical-scroll-proportion="-3.75">
+        <state line="9" column="9" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="15" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -299,18 +302,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="15" selection-start="1562" selection-end="1562" vertical-scroll-proportion="-13.8">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="148" column="10" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-3.12">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="145" selection-end="145" vertical-scroll-proportion="0.22277227">
+        <state line="23" column="8" selection-start="478" selection-end="478" vertical-scroll-proportion="0.74733096">
           <folding />
         </state>
       </provider>
