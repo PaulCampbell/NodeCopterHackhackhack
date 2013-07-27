@@ -5,14 +5,14 @@
     <ignored path="scratch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$USER_HOME$/revuse/test_site/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374916928416" ignored="false" />
-    <file path="/index.html" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374926609190" ignored="false" />
+    <file path="/index.html" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374928278794" ignored="false" />
     <file path="/package.json" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374920021031" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/views/layout.jade" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/views/phoneconnect.jade" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917924674" ignored="false" />
     <file path="$USER_HOME$/WebstormProjects/WiiPhone/infrastructure/routes.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374917909696" ignored="false" />
     <file path="/drone.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374921044004" ignored="false" />
-    <file path="/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374926705223" ignored="false" />
+    <file path="/app.js" changelist="e3ce5bfe-b089-4f3e-b96a-5899f2e62c71" time="1374928327801" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="20" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.640884">
+            <state line="66" column="15" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.4198895">
               <folding>
                 <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -82,14 +82,14 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/drone.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="75" />
+    <option name="x" value="56" />
+    <option name="y" value="78" />
     <option name="width" value="1057" />
     <option name="height" value="754" />
   </component>
@@ -202,7 +202,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="75" width="1057" height="754" extended-state="0" />
+    <frame x="56" y="78" width="1057" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -301,14 +301,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="20" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.640884">
+        <state line="66" column="15" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.4198895">
           <folding>
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

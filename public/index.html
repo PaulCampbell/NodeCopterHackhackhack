@@ -25,7 +25,26 @@
 
 <img src="" id="pic" />
 
+<canvas id="graphicEqualiser" />
+
 <script>
+
+
+    // shim!
+    navigator.getUserMedia ||
+    (navigator.getUserMedia = navigator.mozGetUserMedia ||
+    navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              function( callback ){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
+
+
   $(document).ready(function(){
       $('#takeOff').click(function(){
         takeOff()
@@ -41,8 +60,11 @@
     $('#stop').click(function(){
         stop();
     });
+
     $('#land').click(function(){
-         landDrone();
+      $.get('/land', function(data) {
+              console.log('land');
+            });
     });
 
     $('#up').click(function(){
@@ -50,7 +72,7 @@
        });
 
     $('#down').click(function(){
-            downDrone();
+      downDrown();
        });
 
     $('#forwards').click(function(){
@@ -68,7 +90,49 @@
 
     }, 500)
 
-  })
+
+
+
+    navigator.getUserMedia({audio:true}, gotAudio);
+
+        function gotAudio(stream) {
+          var source =  context.createMediaStreamSource(stream);
+          source.connect(analyser);
+
+          rafCallback();
+        }
+
+    var graphicEqualiserCanvas = document.getElementById('graphicEqualiser');
+    var context = new webkitAudioContext();
+     var analyser = context.createAnalyser();
+
+    function getAverageVolume(array) {
+       var values = 0;
+       var average;
+       var length = array.length;
+       for (var i = 0; i < length; i++) {
+           values += array[i];
+       }
+       average = values / length;
+       return average;
+     }
+
+  function rafCallback(time) {
+
+    requestAnimFrame(rafCallback, graphicEqualiserCanvas);
+      var freqByteData = new Uint8Array(analyser.frequencyBinCount);
+      analyser.getByteFrequencyData(freqByteData);
+
+      //set volume
+      var volume = getAverageVolume(freqByteData);
+
+      if(volume > 100) {
+        console.log(volume);
+        $.get('/land', function(data) {
+               console.log('land');
+             });
+      }
+    }
 
 
   function takeOff(){
@@ -99,8 +163,8 @@
 
   function landDrone() {
     $.get('/land', function(data) {
-                console.log('land');
-              });
+        console.log('land');
+      });
   }
 
   function upDrone() {
@@ -135,10 +199,10 @@
 
   function rightDrone(){
        $.get('/right', function(data) {
-                 console.log('backwards');
-               });
+         console.log('backwards');
+       });
      }
-
+  })
 </script>
 </body>
 </html>

@@ -6,7 +6,8 @@ var client = arDrone.createClient()
 client.disableEmergency()
 
 client.on('navdata', function(e){
-console.log(e)
+
+
   if(e.demo.altitude > 1.5) {
     console.log('TOO HIGH! Safety')
     client.down(0.2)
@@ -49,6 +50,7 @@ app.get('/stop', function(req, res){
 });
 
 app.get('/land', function(req, res){
+  console.log('land')
   client.land();
   res.writeHead(200);
     res.end();
