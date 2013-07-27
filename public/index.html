@@ -136,12 +136,19 @@
         break;
       case 117: // u
         upDrone();
+        break;
       case 110: // n
         downDrone();
+        break;
       case 32: // space
         landDrone();
+        break;
       case 13: // enter
         takeOff();
+        break;
+      case 115:
+        stop();
+        break;
     }
   }
 
@@ -154,7 +161,7 @@
       //set volume
       var volume = getAverageVolume(freqByteData);
 
-      if(volume > 100) {
+      if(volume > 250) {
         console.log(volume);
         $.get('/land', function(data) {
                console.log('land');
